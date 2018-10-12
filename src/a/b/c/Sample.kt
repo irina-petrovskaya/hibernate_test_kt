@@ -1,7 +1,7 @@
-package a.b.c;
+package a.b.c
 
-import javax.persistence.*;
-import java.util.Objects;
+import java.util.*
+import javax.persistence.*
 
 /**
  * *******************************
@@ -12,67 +12,32 @@ import java.util.Objects;
 @Entity
 @Table(name = "sample", schema = "jbtests")
 @NamedQuery(name = "myQuery2", query = "select s from Sample s where s.color = 'red'")
-public class Sample {
-    private int id;
-    private Integer version;
-    private String sample;
-    private String color;
+class Sample {
+    @get:Id
+    @get:Column(name = "id")
+    var id: Int = 0
+    @get:Basic
+    @get:Column(name = "version")
+    var version: Int? = null
+    @get:Basic
+    @get:Column(name = "sample")
+    var sample: String? = null
+    @get:Basic
+    @get:Column(name = "color")
+    var color: String? = null
 
-    @Id
-    @Column(name = "id")
-    public int getId() {
-        return id;
+    override fun equals(o: Any?): Boolean {
+        if (this === o) return true
+        if (o == null || javaClass != o.javaClass) return false
+        val sample1 = o as Sample?
+        return id == sample1!!.id && version == sample1.version && sample == sample1.sample && color == sample1.color
     }
 
-    public void setId(int id) {
-        this.id = id;
+    override fun hashCode(): Int {
+        return Objects.hash(id, version, sample, color)
     }
 
-    @Basic
-    @Column(name = "version")
-    public Integer getVersion() {
-        return version;
-    }
-
-    public void setVersion(Integer version) {
-        this.version = version;
-    }
-
-    @Basic
-    @Column(name = "sample")
-    public String getSample() {
-        return sample;
-    }
-
-    public void setSample(String sample) {
-        this.sample = sample;
-    }
-
-    @Basic
-    @Column(name = "color")
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Sample sample1 = (Sample) o;
-        return id == sample1.id && Objects.equals(version, sample1.version) && Objects.equals(sample, sample1.sample) && Objects.equals(color, sample1.color);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, version, sample, color);
-    }
-
-    @Override
-    public String toString() {
-        return "id=" + id + ", version=" + version + ", sample='" + sample + '\'' + ", color='" + color + '\'' ;
+    override fun toString(): String {
+        return "id=" + id + ", version=" + version + ", sample='" + sample + '\''.toString() + ", color='" + color + '\''.toString()
     }
 }

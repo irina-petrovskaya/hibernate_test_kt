@@ -1,12 +1,8 @@
-import a.b.c.Tab2;
-import org.hibernate.HibernateException;
-import org.hibernate.Metamodel;
-import org.hibernate.query.Query;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-
-import javax.persistence.metamodel.EntityType;
+import a.b.c.Tab2
+import org.hibernate.HibernateException
+import org.hibernate.Session
+import org.hibernate.SessionFactory
+import org.hibernate.cfg.Configuration
 
 /**
  * *******************************
@@ -14,49 +10,52 @@ import javax.persistence.metamodel.EntityType;
  * Project: hibernate_test
  * *******************************
  */
-public class Main {
-    private static final SessionFactory ourSessionFactory;
+object Main {
+    private val ourSessionFactory: SessionFactory
 
-    static {
+    val session: Session
+        @Throws(HibernateException::class)
+        get() = ourSessionFactory.openSession()
+
+    init {
         try {
-            Configuration configuration = new Configuration();
-            configuration.configure();
+            val configuration = Configuration()
+            configuration.configure()
 
-            ourSessionFactory = configuration.buildSessionFactory();
-        } catch (Throwable ex) {
-            throw new ExceptionInInitializerError(ex);
+            ourSessionFactory = configuration.buildSessionFactory()
+        } catch (ex: Throwable) {
+            throw ExceptionInInitializerError(ex)
         }
+
     }
 
-    public static Session getSession() throws HibernateException {
-        return ourSessionFactory.openSession();
-    }
-
-    public static void main(final String[] args) throws Exception {
-        final Session session = getSession();
+    @Throws(Exception::class)
+    @JvmStatic
+    fun main(args: Array<String>) {
+        val session = session
         try {
-            System.out.println("querying all the managed entities...");
-            final Metamodel metamodel = session.getSessionFactory().getMetamodel();
-            for (EntityType <?> entityType : metamodel.getEntities()) {
-                final String entityName = entityType.getName();
-                System.out.println("**********************************");
-                System.out.println(entityName);
-                System.out.println("**********************************");
-                final Query query = session.createQuery("from " + entityName);
-                System.out.println("executing default query: " + query.getQueryString());
-                for (Object o : query.list()) {
-                    System.out.println("  " + o);
+            println("querying all the managed entities...")
+            val metamodel = session.sessionFactory.metamodel
+            for (entityType in metamodel.entities) {
+                val entityName = entityType.name
+                println("**********************************")
+                println(entityName)
+                println("**********************************")
+                val query = session.createQuery("from $entityName")
+                println("executing default query: " + query.queryString)
+                for (o in query.list()) {
+                    println("  $o")
                 }
-                final Query q2 = session.getNamedQuery("myQuery1");
-                System.out.println("executing named query: " + q2.getQueryString());
-                for (Object o : q2.getResultList()) {
-                    Tab2 t = (Tab2) o;
-                    System.out.println("  " + t.toString());
+                val q2 = session.getNamedQuery("myQuery1")
+                println("executing named query: " + q2.queryString)
+                for (o in q2.resultList) {
+                    val t = o as Tab2
+                    println("  " + t.toString())
                 }
 
             }
         } finally {
-            session.close();
+            session.close()
         }
     }
 }
