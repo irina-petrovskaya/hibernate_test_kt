@@ -73,6 +73,6 @@ public class Sample {
 
     @Override
     public String toString() {
-        return "id=" + id + ", version=" + version + ", sample='" + sample + '\'' + ", color='" + color + '\'' ;
+        return "id=" + id + ", version=" + version + ", sample='" + sample + '\'' + ", color='" + color + '\'';
     }
 }
