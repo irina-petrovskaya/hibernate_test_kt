@@ -1,3 +1,4 @@
+import a.b.c.Sample;
 import a.b.c.Tab2;
 import org.hibernate.HibernateException;
 import org.hibernate.Metamodel;
@@ -53,7 +54,12 @@ public class Main {
                     Tab2 t = (Tab2) o;
                     System.out.println("  " + t.toString());
                 }
-
+                final Query q3 = session.getNamedQuery("myQuery2");
+                System.out.println("executing named query: " + q3.getQueryString());
+                for (Object o : q3.getResultList()) {
+                    Sample t = (Sample) o;
+                    System.out.println("  " + t.toString());
+                }
             }
         } finally {
             session.close();

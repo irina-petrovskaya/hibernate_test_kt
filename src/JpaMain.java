@@ -1,4 +1,5 @@
 import a.b.c.Sample;
+import a.b.c.Tab2;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -28,12 +29,20 @@ public class JpaMain {
         entitymanager.getTransaction().commit();
 
 
-        Query namedQuery = entitymanager.createNamedQuery("myQuery2");
+        Query namedQuery2 = entitymanager.createNamedQuery("myQuery2");
         System.out.println("**********************************");
-        System.out.println("executing the named query");
+        System.out.println("executing the named query from Sample");
         System.out.println("**********************************");
-        for (Object o : namedQuery.getResultList()) {
+        for (Object o : namedQuery2.getResultList()) {
             Sample s = (Sample) o;
+            System.out.println(s.toString());
+        }
+        Query namedQuery1 = entitymanager.createNamedQuery("myQuery1");
+        System.out.println("**********************************");
+        System.out.println("executing the named query from Tab2");
+        System.out.println("**********************************");
+        for (Object o : namedQuery1.getResultList()) {
+            Tab2 s = (Tab2) o;
             System.out.println(s.toString());
         }
         // Close the database connection:

@@ -7,6 +7,7 @@
     <persistence-unit name="NewPersistenceUnit">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <class>a.b.c.Sample</class>
+        <class>a.b.c.Tab2</class>
         <properties>
             <property name="hibernate.connection.url" value="jdbc:mysql://unit-300:3306/jbtests"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
