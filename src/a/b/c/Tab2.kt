@@ -11,7 +11,7 @@ import javax.persistence.*
  */
 @Entity
 @Table(name = "tab_2", schema = "jbtests")
-@NamedQuery(name = "myQuery1", query = "select t from Tab2 t where t.age > 30")
+@NamedQuery(name = "namedQueryForTab2", query = "select t from Tab2 t where t.age > 30")
 class Tab2 {
     @get:Id
     @get:Column(name = "id")

@@ -52,13 +52,13 @@ object Main {
             println("****************************************")
             println("********   test named queries   ********")
             println("****************************************")
-            val q2 = session.getNamedQuery("myQuery1")
+            val q2 = session.getNamedQuery("namedQueryForTab2")
             println("executing named query: " + q2.queryString)
             for (o in q2.resultList) {
                 val t = o as Tab2
                 println("  " + t.toString())
             }
-            val q3 = session.getNamedQuery("myQuery2")
+            val q3 = session.getNamedQuery("namedQueryForSample")
             println("executing named query: " + q3.queryString)
             for (o in q3.resultList) {
                 val s = o as Sample

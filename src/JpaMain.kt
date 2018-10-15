@@ -26,7 +26,7 @@ object JpaMain {
         entitymanager.transaction.commit()
 
 
-        val namedQuery2 = entitymanager.createNamedQuery("myQuery2")
+        val namedQuery2 = entitymanager.createNamedQuery("namedQueryForSample")
         println("**********************************")
         println("executing the named query")
         println("**********************************")
@@ -35,7 +35,7 @@ object JpaMain {
             println(s.toString())
         }
 
-        val namedQuery1 = entitymanager.createNamedQuery("myQuery1")
+        val namedQuery1 = entitymanager.createNamedQuery("namedQueryForTab2")
         println("**********************************")
         println("executing the named query from Tab2")
         println("**********************************")

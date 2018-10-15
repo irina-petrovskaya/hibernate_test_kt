@@ -11,7 +11,7 @@ import javax.persistence.*
  */
 @Entity
 @Table(name = "sample", schema = "jbtests")
-@NamedQuery(name = "myQuery2", query = "select s from Sample s where s.color = 'red'")
+@NamedQuery(name = "namedQueryForSample", query = "select s from Sample s where s.color = 'red'")
 class Sample {
     @get:Id
     @get:Column(name = "id")
