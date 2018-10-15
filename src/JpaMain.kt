@@ -1,4 +1,5 @@
 import a.b.c.Sample
+import a.b.c.Tab2
 import javax.persistence.Persistence
 
 object JpaMain {
@@ -25,13 +26,22 @@ object JpaMain {
         entitymanager.transaction.commit()
 
 
-        val namedQuery = entitymanager.createNamedQuery("myQuery2")
+        val namedQuery2 = entitymanager.createNamedQuery("myQuery2")
         println("**********************************")
         println("executing the named query")
         println("**********************************")
-        for (o in namedQuery.resultList) {
+        for (o in namedQuery2.resultList) {
             val s = o as Sample
             println(s.toString())
+        }
+
+        val namedQuery1 = entitymanager.createNamedQuery("myQuery1")
+        println("**********************************")
+        println("executing the named query from Tab2")
+        println("**********************************")
+        for (o in namedQuery1.resultList) {
+            val t = o as Tab2
+            println(t.toString())
         }
         // Close the database connection:
         entitymanager.close()

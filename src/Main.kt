@@ -1,3 +1,4 @@
+import a.b.c.Sample
 import a.b.c.Tab2
 import org.hibernate.HibernateException
 import org.hibernate.Session
@@ -46,14 +47,24 @@ object Main {
                 for (o in query.list()) {
                     println("  $o")
                 }
-                val q2 = session.getNamedQuery("myQuery1")
-                println("executing named query: " + q2.queryString)
-                for (o in q2.resultList) {
-                    val t = o as Tab2
-                    println("  " + t.toString())
-                }
 
             }
+            println("****************************************")
+            println("********   test named queries   ********")
+            println("****************************************")
+            val q2 = session.getNamedQuery("myQuery1")
+            println("executing named query: " + q2.queryString)
+            for (o in q2.resultList) {
+                val t = o as Tab2
+                println("  " + t.toString())
+            }
+            val q3 = session.getNamedQuery("myQuery2")
+            println("executing named query: " + q3.queryString)
+            for (o in q3.resultList) {
+                val s = o as Sample
+                println("  " + s.toString())
+            }
+
         } finally {
             session.close()
         }

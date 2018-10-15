@@ -10,6 +10,7 @@
         <property name="connection.username">irina</property>
         <property name="connection.password">jolt</property>
         <mapping class="a.b.c.Tab2"/>
+        <mapping class="a.b.c.Sample"/>
 
         <!-- DB schema will be updated if needed -->
         <!-- <property name="hbm2ddl.auto">update</property> -->
