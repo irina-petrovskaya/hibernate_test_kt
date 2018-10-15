@@ -64,7 +64,12 @@ object Main {
                 val s = o as Sample
                 println("  " + s.toString())
             }
-
+            val q4 = session.getNamedQuery("nativeQueryForSample")
+            println("executing native query: " + q4.queryString)
+            for (o in q4.resultList) {
+                val s = o as Sample
+                println("  " + s.toString())
+            }
         } finally {
             session.close()
         }
