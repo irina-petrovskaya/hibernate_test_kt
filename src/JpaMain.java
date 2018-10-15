@@ -45,6 +45,14 @@ public class JpaMain {
             Tab2 s = (Tab2) o;
             System.out.println(s.toString());
         }
+        Query nativeQuery1 = entitymanager.createNamedQuery("nativeQueryForSample");
+        System.out.println("**********************************");
+        System.out.println("executing the native query from Sample");
+        System.out.println("**********************************");
+        for (Object o : nativeQuery1.getResultList()) {
+            Sample s = (Sample) o;
+            System.out.println(s.toString());
+        }
         // Close the database connection:
         entitymanager.close();
         factory.close();

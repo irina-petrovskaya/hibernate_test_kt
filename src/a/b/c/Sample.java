@@ -11,6 +11,7 @@ import java.util.Objects;
  */
 @Entity
 @Table(name = "sample", schema = "jbtests")
+@NamedNativeQuery(name = "nativeQueryForSample", query = "select * from sample where version > 3", resultClass = Sample.class)
 @NamedQuery(name = "myQuery2", query = "select s from Sample s where s.color = 'red'")
 public class Sample {
     private int id;

@@ -60,6 +60,12 @@ public class Main {
                     Sample t = (Sample) o;
                     System.out.println("  " + t.toString());
                 }
+                final Query q4 = session.getNamedQuery("nativeQueryForSample");
+                System.out.println("executing native query: " + q3.getQueryString());
+                for (Object o : q4.getResultList()) {
+                    Sample t = (Sample) o;
+                    System.out.println("  " + t.toString());
+                }
             }
         } finally {
             session.close();
