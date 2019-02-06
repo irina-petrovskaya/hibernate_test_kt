@@ -10,7 +10,7 @@ import javax.persistence.*
  * *******************************
  */
 @Entity
-@Table(name = "tab_2", schema = "jbtests")
+@Table(schema = "jbtests", name = "tab_2")
 @NamedQuery(name = "namedQueryForTab2", query = "select t from Tab2 t where t.age > 30")
 class Tab2 {
     @get:Id

@@ -13,10 +13,12 @@ object JpaMain {
         val entitymanager = factory.createEntityManager()
         entitymanager.transaction.begin()
         // Find the number of objects in the database:
-        val count = entitymanager.createQuery("SELECT count(s) FROM Sample s")
+        val count = entitymanager.createQuery("SELECT count(s) FROM sample s")
         val result = count.singleResult as Long
         val rez = Math.toIntExact(result + 1)
         println(result)
+
+
         /*  val sample = Sample()
           sample.id = rez
           sample.sample = "sample$rez"

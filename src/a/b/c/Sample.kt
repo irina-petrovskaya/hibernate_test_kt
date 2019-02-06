@@ -9,10 +9,10 @@ import javax.persistence.*
  * Project: hibernate_test
  * *******************************
  */
-@Entity
+@Entity(name = "sample")
 @Table(name = "sample", schema = "jbtests")
 @NamedNativeQuery(name = "nativeQueryForSample", query = "select * from sample where version > 3", resultClass = Sample::class)
-@NamedQuery(name = "namedQueryForSample", query = "select s from Sample s where s.color = 'red'")
+@NamedQuery(name = "namedQueryForSample", query = "select s from sample s where s.color = 'red'")
 class Sample {
     @get:Id
     @get:Column(name = "id")
