@@ -9,7 +9,8 @@
         <class>a.b.c.Sample</class>
         <class>a.b.c.Tab2</class>
         <properties>
-            <property name="hibernate.connection.url" value="jdbc:mysql://unit-300:3306/jbtests"/>
+            <property name="hibernate.connection.url"
+                      value="jdbc:mysql://unit-300:3306/jbtests?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
             <property name="hibernate.connection.username" value="irina"/>
             <property name="hibernate.connection.password" value="jolt"/>
