@@ -18,7 +18,9 @@
           <factory-entry name="NewPersistenceUnit" value="f074c547-9dc7-4018-8831-2b1dadc10877" />
           <factory-entry name="noname-a.xml@0" value="f074c547-9dc7-4018-8831-2b1dadc10877" />
         </datasource-mapping>
-        <naming-strategy-map />
+        <naming-strategy-map>
+          <unit-entry name="NewPersistenceUnit" />
+        </naming-strategy-map>
         <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/META-INF/persistence.xml" />
       </configuration>
     </facet>
