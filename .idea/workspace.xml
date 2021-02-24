@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="796a2706-19a0-40f0-a600-81271c68c4f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/http_requests.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/foo.groovy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="796a2706-19a0-40f0-a600-81271c68c4f6" name="Default Changelist" comment="more" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +24,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="46fa66cf-339d-4647-8607-5618d9a02f9e" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
@@ -206,8 +205,16 @@
       <workItem from="1614155497219" duration="161000" />
       <workItem from="1614194502993" duration="401000" />
       <workItem from="1614194909920" duration="57000" />
-      <workItem from="1614195227404" duration="358000" />
+      <workItem from="1614195227404" duration="390000" />
     </task>
+    <task id="LOCAL-00001" summary="more">
+      <created>1614195604713</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1614195604713</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +231,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="more" />
+    <option name="LAST_COMMIT_MESSAGE" value="more" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
