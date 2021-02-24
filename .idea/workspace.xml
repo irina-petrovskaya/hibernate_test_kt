@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="796a2706-19a0-40f0-a600-81271c68c4f6" name="Default Changelist" comment="more" />
+    <list default="true" id="796a2706-19a0-40f0-a600-81271c68c4f6" name="Default Changelist" comment="more">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hibernate_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate_test.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +39,7 @@
     <configurations>
       <configuration id="Database Script.contact" name="contact" />
       <configuration id="HTTP Request.start" name="start" />
+      <configuration id="Groovy.startfoo" name="startfoo" />
     </configurations>
   </component>
   <component name="ProjectViewState">
@@ -52,41 +56,16 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/foo.groovy" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.startup.tasks" />
   </component>
   <component name="RunManager" selected="Groovy.startfoo">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="contact" type="DatabaseScript">
       <data-source id="f074c547-9dc7-4018-8831-2b1dadc10877" namespace="schema/&quot;jbtests&quot;" />
       <script-text>select * from contact</script-text>
       <method v="2" />
-    </configuration>
-    <configuration default="true" type="GlassfishConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings>
-        <option name="DOMAIN" value="" />
-        <option name="PRESERVE" value="false" />
-        <option name="COMPATIBILITY" value="false" />
-        <option name="VIRTUAL_SERVER" />
-        <option name="USERNAME" value="admin" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="GlassFish" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="startfoo" type="GroovyScriptRunConfiguration" factoryName="Groovy">
       <module name="hibernate_test" />
@@ -101,52 +80,6 @@
     </configuration>
     <configuration name="start" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" path="$PROJECT_DIR$/http_requests.http">
       <method v="2" />
-    </configuration>
-    <configuration default="true" type="JBossConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings>
-        <option name="SERVER" value="" />
-        <option name="BINDING_SET_NAME" value="" />
-        <option name="DOMAIN" value="false" />
-        <option name="SERVER_GROUP" value="" />
-        <option name="USERNAME" value="" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="JBoss" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="TomeeConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <deployment />
-      <server-settings />
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="WebLogic Instance" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="PORT" value="7001" />
-      <deployment />
-      <server-settings>
-        <option name="DOMAIN_PATH" value="" />
-        <option name="SERVER_NAME" value="myserver" />
-        <option name="DOMAIN_NAME" value="mydomain" />
-        <option name="ADMIN_SERVER_HOST" value="localhost" />
-        <option name="ADMIN_SERVER_PORT" value="7001" />
-        <option name="TARGET_TYPE_NAME" value="TYPE_SERVER" />
-        <option name="CLUSTER_NAME" value="mycluster" />
-        <option name="CONNECT_TO_MANAGED_SERVER" value="false" />
-        <option name="USERNAME" value="weblogic" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="WEBLOGIC_DOMAIN_LOG_FILE" />
-      <predefined_log_file enabled="true" id="WEBLOGIC_SERVER_LOG_FILE" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration default="true" type="WebSphereRunConfigurationType" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <option name="PORT" value="9080" />
@@ -206,6 +139,9 @@
       <workItem from="1614194502993" duration="401000" />
       <workItem from="1614194909920" duration="57000" />
       <workItem from="1614195227404" duration="390000" />
+      <workItem from="1614195689331" duration="194000" />
+      <workItem from="1614195888674" duration="24000" />
+      <workItem from="1614195983079" duration="64000" />
     </task>
     <task id="LOCAL-00001" summary="more">
       <created>1614195604713</created>

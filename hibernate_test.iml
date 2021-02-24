@@ -36,5 +36,6 @@
     <orderEntry type="library" name="Hibernate 5.3.6-5.3.6" level="project" />
     <orderEntry type="library" name="commomLib" level="application" />
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+    <orderEntry type="library" name="groovy-3.0.7" level="application" />
   </component>
 </module>
